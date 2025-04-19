@@ -14,3 +14,12 @@
       (goto-char (point-max))
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
+(straight-use-package 'use-package)
+
+; use lsp-mode
+(straight-use-package 'lsp-mode)
+(use-package lsp-ui
+  :commands lsp-ui-mode
+  :straight t)
+
+(add-hook 'python-mode-hook 'lsp-deferred)
