@@ -16,6 +16,9 @@
   (load bootstrap-file nil 'nomessage))
 (straight-use-package 'use-package)
 
+; only show serious warnings
+(setq warning-minimum-level :error)
+
 ; use lsp-mode
 (straight-use-package 'lsp-mode)
 (use-package lsp-ui
